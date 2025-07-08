@@ -713,6 +713,7 @@ require('lazy').setup({
         functions = { italic = false },
         variables = { italic = false },
       },
+      transparent = { enabled = true },
     },
     config = function(_, opts)
       vim.o.termguicolors = true
