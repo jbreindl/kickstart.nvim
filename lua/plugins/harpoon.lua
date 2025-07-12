@@ -7,10 +7,10 @@ return {
     harpoon:setup {}
     vim.keymap.set('n', '<leader>ha', function()
       harpoon:list():add()
-    end)
+    end, { desc = 'Harpoon [A]dd' })
     vim.keymap.set('n', '<leader>he', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end)
+    end, { desc = 'Harpoon [E]dit' })
 
     vim.keymap.set('n', '<C-h>', function()
       harpoon:list():select(1)
