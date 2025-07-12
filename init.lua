@@ -767,7 +767,7 @@ require('lazy').setup({
   },
 })
 vim.g.snacks_animate = false
-vim.g.copilot_enabled = false
+vim.g.copilot_enabled = true
 -- system clipboard setup
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { desc = '[P]aste from system clipboard' })
