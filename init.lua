@@ -733,8 +733,10 @@ require('lazy').setup({
   require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'plugins',
   require 'plugins.snacks',
-  require 'plugins.copilot',
+  require 'plugins.copilot-chat',
   require 'plugins.harpoon',
+  require 'plugins.copilot',
+  require 'plugins.copilot-cmp',
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
@@ -767,7 +769,7 @@ require('lazy').setup({
   },
 })
 vim.g.snacks_animate = false
-vim.g.copilot_enabled = true
+vim.g.copilot_enabled = false
 -- system clipboard setup
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = '[Y]ank to system clipboard' })
 vim.keymap.set({ 'n', 'v' }, '<leader>p', '"+p', { desc = '[P]aste from system clipboard' })
