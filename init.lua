@@ -491,7 +491,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { 'ruff' },
+        python = { 'ruff_imports', 'ruff' },
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
@@ -501,6 +501,10 @@ require('lazy').setup({
           args = { 'format', '-' },
           stdin = true,
         },
+        ruff_imports = {
+          command = 'ruff',
+          args = { 'check', '--fix', '--select=I', '-' },
+        }
       },
     },
   },
