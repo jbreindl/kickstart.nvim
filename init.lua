@@ -608,33 +608,6 @@ require('lazy').setup({
     },
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    -- Load the colorscheme here.
-    -- Like many other themes, this one has different styles, and you could load
-    -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-    'maxmx03/solarized.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {
-      styles = {
-        comments = { italic = false, bold = false },
-        functions = { italic = false },
-        variables = { italic = false },
-      },
-      transparent = { enabled = true },
-    },
-    config = function(_, opts)
-      vim.o.termguicolors = true
-      vim.o.background = 'light'
-      require('solarized').setup(opts)
-      vim.cmd.colorscheme 'solarized'
-    end,
-  },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
