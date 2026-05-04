@@ -1,7 +1,7 @@
 return {
-  'zbirenbaum/copilot.lua',
-  opts = {
-    suggestion = { enabled = false },
-    panel = { enabled = false },
-  },
+    'github/copilot.lua',
+    opts = {
+        suggestion = { enabled = true },
+        panel = { enabled = false },
+    },
 }
